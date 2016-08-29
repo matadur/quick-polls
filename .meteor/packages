@@ -29,3 +29,6 @@ aldeed:autoform
 kadira:flow-router
 kadira:blaze-layout
 cwaring:modernizr
+artwells:accounts-guest
+accounts-ui
+accounts-password
