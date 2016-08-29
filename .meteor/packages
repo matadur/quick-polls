@@ -27,3 +27,5 @@ shell-server
 aldeed:simple-schema
 aldeed:collection2
 aldeed:autoform
+kadira:flow-router
+kadira:blaze-layout
