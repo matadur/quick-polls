@@ -23,3 +23,7 @@ check
 standard-minifier-css
 standard-minifier-js
 shell-server
+
+aldeed:simple-schema
+aldeed:collection2
+aldeed:autoform
