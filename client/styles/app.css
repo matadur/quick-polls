@@ -12,3 +12,11 @@ body {
 	width:25%;
 	margin:20px;
 }
+
+.poll-buttons{
+	margin-top: 20px;
+}
+
+.poll-buttons span{
+	margin: 0 12px;
+}
