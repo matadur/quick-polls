@@ -1,5 +1,12 @@
 <template name="masterLayout">
-{{>headerContent}}
-{{> Template.dynamic template=content}}
-{{>footerContent}}
+  <body data-spy="scroll" data-target="#navbar" data-offset="120">
+    <div class="wrapper">
+      {{>headerContent}}
+      <div class="container" style="padding-top: 50px">
+        {{> Template.dynamic template=content}}
+      </div>
+      <div class="push"></div>
+    </div>
+    {{>footerContent}}
+  </body>
 </template>
