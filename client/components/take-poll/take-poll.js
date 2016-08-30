@@ -14,7 +14,7 @@ Template.takePollPage.helpers({
   },
 
   inprogress: function(){
-    let pc = Session.get("PollsCompleted")
+    var pc = Session.get("PollsCompleted")
     return pc.length < 10
   }
 
