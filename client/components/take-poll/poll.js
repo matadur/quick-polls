@@ -24,6 +24,11 @@ Template.poll.events({
     var pollID = $('.select-choice.selected').parent('.poll').data('id')
     var voteID = $('.select-choice.selected').data('id')
 
+    if(!pollID){
+      alert('Please select a choice!')
+      return
+    }      
+
     // create the incrementing object so we can add to the corresponding vote
     var voteString = 'choices.' + voteID + '.votes'
     var action = {}
