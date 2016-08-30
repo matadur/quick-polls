@@ -39,7 +39,7 @@ Template.poll.events({
       { $inc: action }
     )
 
-    let pc = Session.get("PollsCompleted")
+    var pc = Session.get("PollsCompleted")
     pc.push(pollID)
     Session.set("PollsCompleted", pc)
 
