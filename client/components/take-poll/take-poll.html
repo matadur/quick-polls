@@ -5,9 +5,9 @@
     </div>
 
     <div class="poll-container">
-      {{ #with nextPoll}}
+      {{ #each nextPoll}}
         {{ >poll }}
-      {{ /with }}
+      {{ /each }}
     </div>
   {{else}}
     {{ >pollsCompleted }}

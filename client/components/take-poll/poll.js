@@ -1,15 +1,14 @@
+
 Template.poll.events({
   'click .select-choice': function(event) {
     event.preventDefault()
 
-    $('.select-choice.selected')
-    .removeClass('btn-success')
-    .removeClass('selected')
-    .addClass('btn-primary')
+    clearSelections()
 
     $(event.currentTarget)
     .addClass('btn-success')
     .addClass('selected')
+
   },
 
   'click .more-info': function(event) {
@@ -27,7 +26,7 @@ Template.poll.events({
     if(!pollID){
       alert('Please select a choice!')
       return
-    }      
+    }
 
     // create the incrementing object so we can add to the corresponding vote
     var voteString = 'choices.' + voteID + '.votes'
@@ -44,6 +43,15 @@ Template.poll.events({
     pc.push(pollID)
     Session.set("PollsCompleted", pc)
 
+    clearSelections()
+
   }
 
 });
+
+clearSelections = function(){
+  $('.select-choice.selected')
+  .removeClass('btn-success')
+  .removeClass('selected')
+  .addClass('btn-primary')
+}
