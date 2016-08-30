@@ -1,7 +1,6 @@
 
 Template.takePollPage.onCreated( function() {
   this.subscribe( 'Polls' );
-  Session.set("PollsCompleted", [])
 });
 
 Template.takePollPage.helpers({
@@ -12,12 +11,13 @@ Template.takePollPage.helpers({
 
   nextPoll: function() {
     var items = Polls.find({"_id":{$nin:Session.get("PollsCompleted")}}, {sort: {_id : 1} }).fetch()
-    return items.slice(-1)
+    var p = items.slice(-1)[0]
+    return p
   },
 
-  finished: function(){
+  inprogress: function(){
     let pc = Session.get("PollsCompleted")
-    return pc.length >= 2
+    return pc.length < 10
   }
 
 });

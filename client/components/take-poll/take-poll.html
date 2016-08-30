@@ -1,21 +1,30 @@
 <template name="takePollPage">
+  {{ #if inprogress }}
+    <div class="text-center">
+      <h1>Test your knowledge!</h1>
+    </div>
 
-  <div class="text-center">
-    <h1>Test your knowledge!</h1>
-  </div>
-
-  <div class="poll-container">
-    {{#if finished}}
-      {{ >pollsCompleted }}
-    {{else}}
-      {{ #each nextPoll }}
+    <div class="poll-container">
+      {{ #with nextPoll}}
         {{ >poll }}
-      {{ /each }}
-    {{/if}}
-  </div>
-
+      {{ /with }}
+    </div>
+  {{else}}
+    {{ >pollsCompleted }}
+  {{ /if }}
 </template>
 
 <template name="pollsCompleted">
-  <span>All Done!</span>
+  <div class="pollsCompleted text-center">
+    <h1 class="giant-heading">
+      All Done
+      <br>
+      <small>Thanks for taking our polls!</small>
+    </h1>
+    <p class="lead">
+      Would you like to add your own poll to our database?
+      <br><br>
+      <a href="/add-poll">Add a Poll</a>
+    </p>
+  </div>
 </template>

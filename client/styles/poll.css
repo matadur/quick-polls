@@ -13,8 +13,21 @@
 }
 
 .poll 	{
-	/*width:25%;*/
 	margin:20px;
+}
+
+.pollsCompleted {
+	margin-top: 40px;
+}
+
+.pollsCompleted .giant-heading {
+	margin-bottom: 20px;
+}
+
+.pollsCompleted .giant-heading small {
+	font-size: 0.4em;
+	letter-spacing: -2px;
+	line-height: 0.5em;
 }
 
 .poll-buttons{
