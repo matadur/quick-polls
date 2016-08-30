@@ -24,12 +24,21 @@ standard-minifier-js
 shell-server
 
 ecmascript
+
 aldeed:simple-schema
 aldeed:collection2
+dburles:collection-helpers
 aldeed:autoform
+
 kadira:flow-router
 kadira:blaze-layout
+
 cwaring:modernizr
+fortawesome:fontawesome
+
+alanning:roles
 artwells:accounts-guest
 accounts-ui
 accounts-password
+
+sach:flow-db-admin

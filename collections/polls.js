@@ -49,6 +49,10 @@ Polls.attachSchema(
         placeholder: 'Enter a name to be used for recognition (optional)'
       }
     },
+    approved: {
+      type: Boolean,
+      defaultValue: false
+    },
     createdAt: {
       type: Date,
       autoValue: function() {
