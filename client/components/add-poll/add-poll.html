@@ -1,0 +1,41 @@
+<template name="addPollPage">
+  <div class="page-header text-center">
+    <div class="jumbotron">
+      <h1>Submit a Poll</h1>
+      <p class="lead">
+        Fill out the form below to submit a poll to our database!
+      </p>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="add-poll-form col-md-6 col-md-offset-3">
+        {{ >addPollForm }}
+        <div class="add-poll-disclaimer text-center">
+          <em>All submissions must be reviewed and approved before they become live.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="addPollForm">
+  {{#autoForm collection="Polls" id="insertPollForm" type="insert" class=""}}
+  <fieldset>
+    <div class="form-group question-group">
+      {{> afQuickField name='question' rows=2}}
+    </div>
+    {{> afQuickField name='choices.1.text' rows=2 label='Choice #1'}}
+    {{> afQuickField name='choices.2.text' rows=2 label='Choice #2'}}
+    {{> afQuickField name='choices.3.text' rows=2 label='Choice #3'}}
+    {{> afQuickField name='choices.4.text' rows=2 label='Choice #4'}}
+    {{> afQuickField name='infoUrl'}}
+    {{> afQuickField name='submitter'}}
+  </fieldset>
+  <button type="submit" class="btn btn-lg btn-primary btn-block">Submit Poll</button>
+  <!-- <button type="submit" class="btn btn-primary">Create</button> -->
+  {{/autoForm}}
+
+</template>

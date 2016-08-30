@@ -1,0 +1,21 @@
+<template name="takePollPage">
+
+  <div class="text-center">
+    <h1>Test your knowledge!</h1>
+  </div>
+
+  <div class="poll-container">
+    {{#if finished}}
+      {{ >pollsCompleted }}
+    {{else}}
+      {{ #each nextPoll }}
+        {{ >poll }}
+      {{ /each }}
+    {{/if}}
+  </div>
+
+</template>
+
+<template name="pollsCompleted">
+  <span>All Done!</span>
+</template>

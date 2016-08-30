@@ -1,18 +1,19 @@
 <template name="poll">
 
-  <div class="poll well well-lg" data-id="{{ _id }}">
+  <div class="poll well" data-id="{{ _id }}">
 
     <h3 class="text-center">{{ question }}</h3>
 
     {{ #each indexedArray choices }}
-    <a href="#" class="vote btn btn-primary btn-block" data-id="{{ _index }}">
+    <a href="#" class="select-choice btn btn-primary btn-block" data-id="{{ _index }}">
       <span class="text">{{ text }}</span>
     </a>
     {{ /each }}
 
     <div class="row text-center poll-buttons">
-    <span class="btn btn-info">More Info</span>
-    <span class="btn btn-success">Submit</span>
+
+    <span class="more-info btn btn-info">More Info</span>
+    <span class="submit-choice btn btn-success">Submit</span>
   </div>
   </div>
 </template>

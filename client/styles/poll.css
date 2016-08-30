@@ -1,0 +1,36 @@
+.poll-container 	{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+}
+
+.add-poll-form {
+  margin-bottom: 50px;
+}
+
+.add-poll-disclaimer {
+  padding: 10px;
+}
+
+.poll 	{
+	/*width:25%;*/
+	margin:20px;
+}
+
+.poll-buttons{
+	margin-top: 20px;
+}
+
+.poll-buttons span{
+	margin: 0 12px;
+  line-height: 1.2em;
+  font-size: 1.4em;
+}
+
+.select-choice {
+  margin: 10px 0;
+  padding: 10px 0;
+  line-height: 1.2em;
+  font-size: 1.4em;
+  text-align: center;
+}

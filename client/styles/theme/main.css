@@ -162,10 +162,10 @@ img {
 }
 
 /* do not group these rules */
-.form-control::-webkit-input-placeholder { color:#fff; }
-.form-control::-moz-placeholder { color:#fff; } /* firefox 19+ */
-.form-control:-ms-input-placeholder { color:#fff; } /* ie */
-input:-moz-placeholder { color:#fff; }
+/*.form-control::-webkit-input-placeholder { color:#55CBD2; }*/
+/*.form-control::-moz-placeholder { color:#55CBD2; } /* firefox 19+ */*/
+/*.form-control:-ms-input-placeholder { color:#55CBD2; } /* ie */*/
+/*input:-moz-placeholder { color:#55CBD2; }*/
 
 
 

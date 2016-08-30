@@ -11,7 +11,7 @@ Polls.attachSchema(
     },
     "choices.$.text": {
       type: String,
-      label: "Choice",      
+      label: "Choice",
       autoform: {
         rows: 2,
         placeholder: 'Enter a choice'
@@ -29,12 +29,20 @@ Polls.attachSchema(
       label: "More Info URL",
       max: 1024,
       optional: true,
-      regEx: SimpleSchema.RegEx.Url
+      regEx: SimpleSchema.RegEx.Url,
+      autoform: {
+        label: 'URL',
+        placeholder: 'Enter a URL that provides more info on this content'
+      }
     },
     submitter: {
       type: String,
       label: "Submitter Name",
-      optional: true
+      optional: true,
+      autoform: {
+        label: 'Name',
+        placeholder: 'Enter a name to be used for recognition (optional)'
+      }
     },
     createdAt: {
       type: Date,
