@@ -7,7 +7,7 @@ Template.takePollPage.onCreated( function() {
 Template.takePollPage.helpers({
 
   nextPoll: function() {
-    var items = Polls.find({"_id":{$nin:Session.get("PollsCompleted")}}, {sort: {_id : 1} }).fetch()
+    var items = Polls.find({"_id":{$nin:Session.get("PollsCompleted")},"approved":true}, {sort: {_id : 1} }).fetch()
     var np = items.slice(-1)
     var poll = np[0]
     return np
