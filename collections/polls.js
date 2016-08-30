@@ -30,6 +30,11 @@ Polls.attachSchema(
       max: 1024,
       optional: true,
       regEx: SimpleSchema.RegEx.Url,
+      autoValue: function() {
+        if (this.isInsert && !this.value) {
+          return 'https://www.google.com/?q=' + encodeURIComponent(this.field('question').value)
+        }
+      },
       autoform: {
         label: 'URL',
         placeholder: 'Enter a URL that provides more info on this content'
