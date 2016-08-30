@@ -1,6 +1,6 @@
 AdminConfig = {
   name: 'Quick Polls',
-  adminEmails: ['admin@test.com'],
+  adminEmails: ['admin@test.com','penrose@zoominternet.net'],
   nonAdminRedirectRoute: 'adminLogin',
   dashboard: {
     homeUrl: '/'
