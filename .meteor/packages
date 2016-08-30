@@ -23,6 +23,7 @@ standard-minifier-css
 standard-minifier-js
 shell-server
 
+ecmascript
 aldeed:simple-schema
 aldeed:collection2
 aldeed:autoform
